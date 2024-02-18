@@ -198,6 +198,7 @@ a {
 
 .article-content {
     position: relative;
+    width: 100%;
     border: 3px solid #837143;
     padding: 39px 32px 32px;
 }
@@ -560,6 +561,100 @@ a {
     color: #b59f5b;
 }
 
+/* стили блока товаров */
+
+.our-products {
+    padding: 0 23px 40px;
+    font-family: OpenSans, arial, sans-serif;
+}
+
+.our-products-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.our-products-title:after {
+    position: relative;
+    left: 47%;
+    top: 10px;
+    display: block;
+    width: 66px;
+    height: 3px;
+    content: '';
+    background: #e1d9bd;
+}
+
+.cards-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-card {
+    display: flex;
+    max-width: 30%;
+    flex-direction: column;
+}
+.card-content {
+    flex-grow: 1;
+    padding: 40px 0 0 0;
+    outline: 3px solid #d3c59d;
+    margin-top: -20px;
+    outline-offset: 21px;
+}
+
+.card-title {
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 15px;
+    margin-bottom: 24px;
+    line-height: 24px;
+}
+
+.card-link {
+    color: #b59f5b;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
+
+.price-btn-block {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.card-prices {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.card-old-price {
+    text-decoration: line-through;
+}
+
+.card-price {
+    font-size: 20px;
+}
+
+.price-btn {
+    padding: 18px 30px;
+    font-size: inherit;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+/* стили футера */
 
 .footer {
     padding-bottom: 40px;
