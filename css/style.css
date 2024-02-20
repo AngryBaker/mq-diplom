@@ -134,7 +134,7 @@ select {
 }
 
 .hidden {
-    display: one;
+    display: none;
 }
 
 .popup-close{
