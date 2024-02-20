@@ -31,9 +31,11 @@
       
         </div>
       
-      </header>
+    </header>
+     
 
-      <section class="now-trendy">
+
+    <section class="now-trendy">
         <div class="trendy-header">
             <h2 class="trendy-title">Сейчас в тренде</h2>
         </div>
@@ -77,9 +79,43 @@
             </article>
         </div>
         
-      </section>
+    </section>
 
-      <div class="main_container container">
+    <div class="popup hidden">
+        <form action="" class="feedback-form ">
+            <h2 class="popup-title">ваш фидбек</h2>
+            <div class="input-frequency">
+                <span class="input-frequency-title">Как часто вы заходите на сайт?</span>
+                <select name="" id="" class="input-frequency-select feedback-field-focus feedback-field-color">
+                    <option value="" class="option-item">Почти каждый день</option>
+                    <option value="" class="option-item">Раз в несколько дней</option>
+                    <option value="" class="option-item">Раз в несколько недель</option>
+                    <option value="" class="option-item">Несколько раз в год</option>
+                </select>
+            </div>
+
+            <fieldset class="subscribe-check">
+                <legend class="subscribe-check-legend">Вы подписаны на e-mail рассылку?</legend>
+                <label for="check-btn" class="subscribe-check-label first-check-label">
+                    <input type="radio" id="check-btn" class="subscribe-check-btn" checked name="subscribe-check-btn">
+                    <span class="subscribe-check-text">Да</span> 
+                </label>
+                <label for="check-btn-no" class="subscribe-check-label last-check-lbl">
+                    <input type="radio" id="check-btn-no" class="subscribe-check-btn" name="subscribe-check-btn">
+                    <span class="subscribe-check-text ">Нет</span> 
+                </label>  
+            </fieldset>
+
+            <label class="offer-content">
+                Расскажите, какой контент вы хотели бы видеть на нашем сайте?
+                <textarea class="offer-content-input feedback-field-focus feedback-field-color">Может, больше рецептов? </textarea>
+            </label>
+
+            <button class="submit-btn">Отправить</button>
+        </form>
+    </div>
+
+    <div class="main_container container">
       
         <!-- Основной контент -->
       
@@ -307,9 +343,9 @@
             </ul>
           </section>
         </aside> 
-      </div>
-
-        <section class="our-products container">
+    </div>
+        
+    <section class="our-products container">
             <h2 class="our-products-title" >наши изделия</h2>
 
             <div class="cards-wrapper">
@@ -352,8 +388,8 @@
                         <p class="card-text">Необычная рамка для украшения дома из видео   <a href="#0" class="card-link">«Как сделать рамку из подручных средств за 30 минут»</a></p>
                         <div class="price-btn-block">
                             <div class="card-prices">
-                                <span class="card-old-price">1000 &#8381;</span>
-                                <span class="card-price">800 &#8381;</span>
+                                <span class="card-old-price">500 &#8381;</span>
+                                <span class="card-price">400 &#8381;</span>
                             </div> 
                             <button class="price-btn btn" type="button">в магазин</button>
                         </div>
@@ -363,9 +399,9 @@
             </div>
 
             
-        </section>
+    </section>
       
-      <footer class="footer container">
+    <footer class="footer container">
       
         <address class="social_links">
           <ul class="social_links_list">
@@ -377,6 +413,6 @@
       
         <div class="copyright"><a href="#0" class="copyright_link">Copyright &copy; 2009–2019 City Blog LLC. </a></div>
       
-      </footer>
+    </footer>
 </body>
 </html>

@@ -15,6 +15,7 @@
 * {
     margin: 0;
     padding: 0;
+    border: none;
 } 
 
 h1, h2, h3, h4 {
@@ -32,6 +33,9 @@ a {
     text-decoration: none;
 }
 
+select {
+    appearance: none;
+}
 
 .header {
     position: relative;
@@ -114,16 +118,155 @@ a {
     
 }
 
+/* попап */
 
-.main_container {
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 59px;
-    padding-top: 64px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
     font-family: OpenSans ,"Arial", sans-serif ;
-    font-weight: bold;
+    background: rgba(0, 0, 0, 0.6);
 }
 
+.hidden {
+    display: none;
+}
+
+.feedback-form {
+    position: absolute;
+    display: flex;
+    top: 25.4%;
+    flex-direction: column;
+    max-width: 329px;
+    padding: 45px 30px 50px;
+    background: #ffffff;
+    font-size: 13px;
+}
+
+.popup-title {
+    margin-bottom: 33px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+.popup-title::after {
+    position: relative;
+    left: 40%;
+    top: 10px;
+    display: block;
+    width: 66px;
+    height: 3px;
+    content: '';
+    background: #e1d9bd;
+}
+
+.input-frequency {
+    margin-bottom: 30px;
+}
+
+.input-frequency-title {
+    display: block;
+    margin-bottom: 9px;
+    
+}
+.input-frequency-select {
+    display: block;
+    width: 100%;
+    padding: 15px 15px 15px 18px;
+    background-color: #f4f7f6;
+    background-image: url(../svg/form-arrows.svg);
+    background-position: 96% 50%;
+    background-size: 10px;
+    background-repeat: no-repeat;
+}
+
+.feedback-field-focus:focus {
+    outline: 1px solid #b9a464;
+}
+
+.feedback-field-color {
+    color: #a9a9a9;
+    font-family: OpenSans ,"Arial", sans-serif;
+}
+
+.subscribe-check {
+    margin-bottom: 27px;
+}
+
+.subscribe-check-legend {
+    margin-bottom: 7px;
+}
+
+.first-check-label {
+    margin-right: 12px;
+}
+
+.subscribe-check-text::before {
+    content: "" ;
+    display: inline-block;
+    margin-right: 2px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../svg/form-empty-circle.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 18px;
+    vertical-align: middle;
+
+}
+
+.subscribe-check-btn {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    width: 1px
+}
+    
+
+
+.subscribe-check-btn:checked ~ .subscribe-check-text::before {
+    background-image: url(../svg/form-circle.svg);
+}
+
+.offer-content {
+    margin-bottom: 26px;
+}
+
+.offer-content-input {
+    display: block;
+    margin-top: 6px;
+    box-sizing: border-box;
+    padding: 16px 20px;
+    width: 100%;
+    height: 131px;
+    background-color: #f4f7f6;
+}
+
+.submit-btn {
+    padding: 15px 10px;
+    font-family: inherit;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffffff;
+    background: #b59f5b;
+}
+
+.submit-btn:hover {
+    background: #323232;
+    
+}
+
+
+/* сейчас в трендах */
 .now-trendy {
     font-family: OpenSans ,"Arial", sans-serif;
     font-weight: bold;
@@ -131,8 +274,9 @@ a {
 
 .trendy-header {
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 45px;
+    padding-top: 57px;
+    padding-bottom: 36px;
+    text-transform: uppercase;
 }
 
 .trendy-title {
@@ -162,7 +306,7 @@ a {
     position: relative;
     display: flex;
     align-items: end;
-    padding: 20px  23px 16px ;
+    padding: 20px  21px 16px ;
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -200,7 +344,7 @@ a {
     position: relative;
     width: 100%;
     border: 3px solid #837143;
-    padding: 39px 32px 32px;
+    padding: 39px 31px 32px;
 }
 
 .trendy-article_title {
@@ -214,6 +358,15 @@ a {
 
 
 /* Стили основного контента */
+
+.main_container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 52px;
+    padding-top: 64px;
+    font-family: OpenSans ,"Arial", sans-serif ;
+    font-weight: bold;
+}
 
 .main_section {
     max-width: 778px; 
@@ -564,15 +717,17 @@ a {
 /* стили блока товаров */
 
 .our-products {
-    padding: 0 23px 40px;
+    padding: 0 38px;
+    margin-bottom: 89px;
     font-family: OpenSans, arial, sans-serif;
 }
 
 .our-products-title {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 37px;
     font-size: 20px;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .our-products-title:after {
@@ -593,27 +748,28 @@ a {
 
 .product-card {
     display: flex;
-    max-width: 30%;
+    max-width: 27%;
     flex-direction: column;
 }
 .card-content {
     flex-grow: 1;
-    padding: 40px 0 0 0;
+    padding: 27px 0 4px 0;
     outline: 3px solid #d3c59d;
-    margin-top: -20px;
+    margin-top: -10px;
     outline-offset: 21px;
 }
 
 .card-title {
-    margin-bottom: 8px;
+    margin-bottom: 1px;
     font-size: 20px;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .card-text {
     font-size: 15px;
     margin-bottom: 24px;
-    line-height: 24px;
+    line-height: 22px;
 }
 
 .card-link {
@@ -633,11 +789,13 @@ a {
 .card-prices {
     display: flex;
     flex-direction: column;
+    padding-top: 4px;
     font-weight: bold;
 }
 
 .card-old-price {
     text-decoration: line-through;
+    margin-bottom: -7px;
 }
 
 .card-price {
