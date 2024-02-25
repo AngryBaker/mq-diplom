@@ -14,6 +14,11 @@
             <a href="#0" class="logo_link"><img src="svg/noemi-logo.svg" alt="Noemi" class="logo"></a>
       
             <nav class="nav_menu">
+                <div class="burger-btn">
+                    <div class="btn-line"></div>
+                    <div class="btn-line"></div>
+                    <div class="btn-line"></div>
+                </div>
               <ul class="nav_list">
                 <li class="menu_item"><a href="#0" class="menu_link">главная</a></li>
                 <li class="menu_item"><a href="#0" class="menu_link">посты</a></li>
@@ -43,7 +48,7 @@
         <div class="trendy-articles">
             <article class="trendy-article garden-article">
                 <div class="article-content">
-                    <ul class="themes">
+                    <ul class="trendy-themes">
                         <li class="article_theme"><a href="#0">lifestyle</a></li>
                         <li class="article_theme"><a href="#0">interior</a></li>
                     </ul>
@@ -53,7 +58,7 @@
             </article>
             <article class="trendy-article cheese-article">
                 <div class="article-content">
-                    <ul class="themes">
+                    <ul class="trendy-themes">
                         <li class="article_theme"><a href="#0">Food</a></li>
                     </ul>
                     <h2 class="trendy-article_title"><a href="#0" class="trendy-link">сыры на красивых  картинках из интернета: какие они на вкус?</a></h2>
@@ -61,7 +66,7 @@
             </article>
             <article class="trendy-article hiking-article">
                 <div class="article-content">
-                    <ul class="themes">
+                    <ul class="trendy-themes">
                         <li class="article_theme"><a href="#0">lifestyle</a></li>
                         <li class="article_theme"><a href="#0">Travel</a></li>
                     </ul>
@@ -70,7 +75,7 @@
             </article>
             <article class="trendy-article lemonade-article">
                 <div class="article-content">
-                    <ul class="themes">
+                    <ul class="trendy-themes">
                         <li class="article_theme"><a href="#0">food</a></li>
                         <li class="article_theme"><a href="#0">health</a></li>
                     </ul>
@@ -84,7 +89,7 @@
     <div class="popup hidden">
         
         <form action="" class="feedback-form ">
-            <button type="button" class="popup-close"></button>
+            <button type="button"  aria-label="Закрыть окно с формой" class="popup-close"></button>
             <h2 class="popup-title">ваш фидбек</h2>
             <div class="input-frequency">
                 <span class="input-frequency-title">Как часто вы заходите на сайт?</span>
@@ -150,7 +155,7 @@
           <article class="main_article yoga_article">
       
             <div class="article_cover">
-              <img src="images/last-post2.jpg" alt="Прекрасный пляж">
+              <img class="cover_img" src="images/last-post2.jpg" alt="Прекрасный пляж">
             </div>
       
             <div class="text_block">
@@ -173,7 +178,7 @@
           <article class="main_article music_article">
       
             <div class="article_cover">
-              <img src="images/last-post3.jpg" alt="Прекрасный пляж">
+              <img class="cover_img" src="images/last-post3.jpg" alt="Прекрасный пляж">
             </div>
       
             <div class="text_block">
@@ -196,7 +201,7 @@
           <article class="main_article cooking_article">
       
             <div class="article_cover">
-              <img src="images/last-post4.jpg" alt="Прекрасный пляж">
+              <img class="cover_img" src="images/last-post4.jpg" alt="Прекрасный пляж">
             </div>
       
             <div class="text_block">
@@ -219,7 +224,7 @@
           <article class="main_article pillow_article">
       
             <div class="article_cover">
-              <img src="images/last-post5.jpg" alt="Прекрасный пляж">
+              <img class="cover_img" src="images/last-post5.jpg" alt="Прекрасный пляж">
             </div>
       
             <div class="text_block">
@@ -352,7 +357,13 @@
 
             <div class="cards-wrapper">
                 <article class="product-card pillow-card">
-                    <img src="images/shop-item-desk1.jpg" alt="обложка карточки" class="card-img">
+                    <picture class="card-img">
+                        <source media="(max-width: 640px)" srcset="images/shop-item-mobile1.jpg" >
+                        <source media="(max-width: 1199px)" srcset="images/shop-item-tablet1.jpg" >
+                        <source media="(min-width: 1200px)" srcset="images/shop-item-desk1.jpg" >
+                        <img src="images/shop-item-desk1.jpg" alt="обложка карточки" class="card-img">
+                    </picture>
+                    
                     <div class="card-content">
                         <h2 class="card-title">Подушки на диван</h2>
                         <p class="card-text">Набор из двух подушек с модными принтами. Видео о создании <a href="#0" class="card-link">здесь</a></p>
@@ -368,7 +379,13 @@
                 </article>
     
                 <article class="product-card doll-card">
-                    <img src="images/shop-item-desk2.jpg" alt="обложка карточки" class="card-img">
+                    <picture class="card-img">
+                        <source media="(max-width: 640px)" srcset="images/shop-item-mobile2.jpg" >
+                        <source media="(max-width: 1199px)" srcset="images/shop-item-tablet2.jpg" >
+                        <source media="(min-width: 1200px)" srcset="images/shop-item-desk2.jpg" >
+                        <img src="images/shop-item-desk2.jpg" alt="обложка карточки" class="card-img">
+                    </picture>
+                    
                     <div class="card-content">
                         <h2 class="card-title">Кукла «Зайчик»</h2>
                         <p class="card-text">Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#0" class="card-link">весенняя серия постов</a> в блоге и несколько подкастов </p>
@@ -384,7 +401,13 @@
                 </article>
     
                 <article class="product-card border-card">
-                    <img src="images/shop-item-desk3.jpg" alt="обложка карточки" class="card-img">
+                    <picture class="card-img">
+                        <source media="(max-width: 640px)" srcset="images/shop-item-mobile3.jpg" >
+                        <source media="(max-width: 1199px)" srcset="images/shop-item-tablet3.jpg" >
+                        <source media="(min-width: 1200px)" srcset="images/shop-item-desk3.jpg" >
+                        <img src="images/shop-item-desk3.jpg" alt="обложка карточки" class="card-img">
+                    </picture>
+                    
                     <div class="card-content">
                         <h2 class="card-title">Шестиугольная рамка</h2>
                         <p class="card-text">Необычная рамка для украшения дома из видео   <a href="#0" class="card-link">«Как сделать рамку из подручных средств за 30 минут»</a></p>
