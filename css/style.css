@@ -926,6 +926,7 @@ select {
     }
 
     .burger-btn {
+        display: block;
         width: 22px;
         height: 20px;
         background-image: url(../images/BtnClose.png);
@@ -933,7 +934,10 @@ select {
     }
 
     .btn-line {
-        width: 10px;
+        width: 21px;
+        height: 2px;
+        margin-bottom: 5px;
+        background-color: #ffffff;
     }
 
     .nav_list {
@@ -1157,7 +1161,7 @@ select {
     }
 
     .burger-btn {
-        width: 25px;
+        width: 23px;
     }
 
     .header_title {
