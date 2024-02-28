@@ -144,6 +144,7 @@ select {
     left: 104.2%;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: transparent;
     cursor: pointer;
 }
 
@@ -930,6 +931,7 @@ select {
         width: 22px;
         height: 20px;
         background-image: url(../images/BtnClose.png);
+        background-color: transparent;
         cursor: pointer;
     }
 
